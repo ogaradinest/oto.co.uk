@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1d4ed8" />
+    
+    <!-- GitHub Pages Routing Fix -->
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+    
+    <meta name="description" content="otobrothers - Business Automation Specialists. We deliver high-impact automation solutions that move the needle for your business." />
+    <meta name="keywords" content="business automation, process automation, AI automation, workflow optimization, otobrothers" />
+    <meta name="author" content="otobrothers" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="otobrothers - Business Automation Specialists" />
+    <meta property="og:description" content="Proven automation solutions that deliver real ROI. 21+ successful implementations, $270k+ in savings delivered." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ogaradinest.github.io/oto.com/" />
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="otobrothers - Business Automation Specialists" />
+    <meta name="twitter:description" content="Proven automation solutions that deliver real ROI. 21+ successful implementations, $270k+ in savings delivered." />
+    
+    <title>otobrothers - Business Automation Specialists</title>
+    
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Custom Fonts -->
+    <style>
+        @font-face {
+            font-family: 'Armin Grotesk';
+            src: url('https://customer-assets.emergentagent.com/job_owl-automation/artifacts/7tvtt85i_W%20Type%20Foundry%20-%20Armin%20Grotesk%20UltraLight.otf') format('opentype');
+            font-weight: 200;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Armin Grotesk';
+            src: url('https://customer-assets.emergentagent.com/job_owl-automation/artifacts/3kypy2w0_W%20Type%20Foundry%20-%20Armin%20Grotesk%20Normal.otf') format('opentype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Armin Grotesk';
+            src: url('https://customer-assets.emergentagent.com/job_owl-automation/artifacts/4h3fw6op_W%20Type%20Foundry%20-%20Armin%20Grotesk%20UltraBold.otf') format('opentype');
+            font-weight: 800;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="https://customer-assets.emergentagent.com/job_automate-business/artifacts/ivnkooon_logo_header.png" alt="otobrothers" class="logo-header" />
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop">
+                <button onclick="scrollToSection('process')" class="nav-link">Process</button>
+                <button onclick="scrollToSection('solutions')" class="nav-link">Solutions</button>
+                <button onclick="scrollToSection('about')" class="nav-link">About</button>
+                <button onclick="scrollToSection('contact')" class="nav-button">Let's talk</button>
+            </nav>
+
+            <!-- Mobile menu button -->
+            <div class="mobile-menu-btn">
+                <button onclick="toggleMobileMenu()" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="mobile-menu">
+                <div class="mobile-menu-content">
+                    <button onclick="scrollToSection('process')" class="mobile-nav-link">Process</button>
+                    <button onclick="scrollToSection('solutions')" class="mobile-nav-link">Solutions</button>
+                    <button onclick="scrollToSection('about')" class="mobile-nav-link">About</button>
+                    <button onclick="scrollToSection('contact')" class="mobile-nav-button">Let's talk</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+        </div>
+        
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title glass-card">
+                    <span class="text-blue">otomation</span><br>
+                    at the center of everything* we do.<br>
+                    <span class="hero-footnote">*apart from ping-pong. that's still analog.</span>
+                </h1>
+            </div>
+
+            <div class="hero-cta">
+                <button onclick="scrollToSection('contact')" class="btn-primary">
+                    Let's talk
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12,5 19,12 12,19"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Key benefits -->
+            <div class="hero-benefits">
+                <div class="benefit-card glass-card">
+                    <div class="benefit-icon bg-blue">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"></polygon>
+                        </svg>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>FAST</h3>
+                        <p>Implementation in weeks</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-card glass-card">
+                    <div class="benefit-icon bg-blue-dark">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                        </svg>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>PROVEN</h3>
+                        <p>21 successful implementations</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-card glass-card">
+                    <div class="benefit-icon bg-red">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>ROI</h3>
+                        <p>+$250k savings delivered</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <div class="section-header">
+                <h2><span class="text-blue">otomation</span> Process</h2>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-card process-card-1">
+                    <div class="process-bg"></div>
+                    <div class="process-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </div>
+                    <div class="process-content">
+                        <h3>IDENTIFY</h3>
+                        <p>high-impact otomation opportunities</p>
+                    </div>
+                </div>
+
+                <div class="process-card process-card-2">
+                    <div class="process-bg"></div>
+                    <div class="process-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="m22 21-3-3m3 0a6 6 0 1 0-12 0 6 6 0 0 0 12 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="process-content">
+                        <h3>EDUCATE</h3>
+                        <p>train you and your team to make sure you can innovate further</p>
+                    </div>
+                </div>
+
+                <div class="process-card process-card-3">
+                    <div class="process-bg"></div>
+                    <div class="process-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                        </svg>
+                    </div>
+                    <div class="process-content">
+                        <h3>IMPLEMENT</h3>
+                        <p>efficiency through a fresh pair of eyes. owl eyes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-cta">
+                <button onclick="scrollToSection('contact')" class="btn-primary">
+                    Let's talk
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12,5 19,12 12,19"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="solutions" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="glass-card"><span class="text-blue">otomation</span> Solutions</h2>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card" onclick="toggleService(1)">
+                    <div class="service-header bg-blue-gradient">
+                        <div class="service-info">
+                            <div class="service-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"></polygon>
+                                </svg>
+                            </div>
+                            <h3>AI-Powered Business Process</h3>
+                        </div>
+                        <div class="service-toggle">
+                            <svg id="chevron-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div id="service-1" class="service-content">
+                        <ul>
+                            <li>Workflow Automation: Automating repetitive processes (approvals, onboarding, compliance checks, document routing)</li>
+                            <li>Document Processing: Extracting and processing data from invoices, contracts, forms using OCR + NLP</li>
+                            <li>Contract Management: AI-driven drafting, redlining, and compliance validation</li>
+                            <li>Robotic Process Automation (RPA) with AI: Handling tasks across legacy systems and enterprise apps</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card" onclick="toggleService(2)">
+                    <div class="service-header bg-blue-gradient-2">
+                        <div class="service-info">
+                            <div class="service-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="m22 21-3-3m3 0a6 6 0 1 0-12 0 6 6 0 0 0 12 0z"></path>
+                                </svg>
+                            </div>
+                            <h3>Sales & Marketing</h3>
+                        </div>
+                        <div class="service-toggle">
+                            <svg id="chevron-2" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div id="service-2" class="service-content">
+                        <ul>
+                            <li>AI Lead Scoring & Qualification: Predictive scoring models to prioritize high-value leads</li>
+                            <li>Personalized Outreach: AI-generated sales emails, LinkedIn messages, and nurture sequences</li>
+                            <li>Chatbots & Conversational AI: Automated client engagement, appointment booking, and customer support</li>
+                            <li>Market Intelligence & Competitor Monitoring: AI scrapes and analyzes market data for sales teams</li>
+                            <li>Content Automation: Generating tailored case studies, proposals, and marketing collateral</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card" onclick="toggleService(3)">
+                    <div class="service-header bg-red-gradient">
+                        <div class="service-info">
+                            <div class="service-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                                </svg>
+                            </div>
+                            <h3>Customer Experience & Support</h3>
+                        </div>
+                        <div class="service-toggle">
+                            <svg id="chevron-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div id="service-3" class="service-content">
+                        <ul>
+                            <li>AI Helpdesk Agents: Multi-channel virtual assistants to resolve Tier 1 issues</li>
+                            <li>Sentiment Analysis: Monitoring client emails, chats, and calls to gauge satisfaction</li>
+                            <li>Customer Journey Mapping: Predictive analytics for churn risk and upsell opportunities</li>
+                            <li>Knowledge Base Automation: AI auto-updates internal/external FAQs and manuals</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card" onclick="toggleService(4)">
+                    <div class="service-header bg-blue-gradient-3">
+                        <div class="service-info">
+                            <div class="service-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                                    <line x1="2" y1="10" x2="22" y2="10"></line>
+                                </svg>
+                            </div>
+                            <h3>Finance & Operations</h3>
+                        </div>
+                        <div class="service-toggle">
+                            <svg id="chevron-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div id="service-4" class="service-content">
+                        <ul>
+                            <li>Automated Bookkeeping & Expense Management: AI categorizes and reconciles transactions</li>
+                            <li>AI Credit Risk Analysis: Automated credit scoring and payment behavior prediction</li>
+                            <li>Cash Flow Forecasting: Predictive analytics for financial planning</li>
+                            <li>Procurement Automation: AI vendor selection, contract comparison, and supply chain monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card" onclick="toggleService(5)">
+                    <div class="service-header bg-blue-gradient-4">
+                        <div class="service-info">
+                            <div class="service-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M22 11l-3-3 3-3"></path>
+                                    <path d="M16 8h4"></path>
+                                </svg>
+                            </div>
+                            <h3>HR & People Ops</h3>
+                        </div>
+                        <div class="service-toggle">
+                            <svg id="chevron-5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div id="service-5" class="service-content">
+                        <ul>
+                            <li>AI Recruitment Assistants: Automated CV screening, candidate ranking, and skill matching</li>
+                            <li>Employee Onboarding Bots: Automating forms, compliance training, and IT provisioning</li>
+                            <li>Workforce Analytics: Predict attrition, productivity, and engagement</li>
+                            <li>AI-Powered L&D: Personalized training content recommendations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card" onclick="toggleService(6)">
+                    <div class="service-header bg-red-gradient-2">
+                        <div class="service-info">
+                            <div class="service-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                                </svg>
+                            </div>
+                            <h3>Data & Analytics</h3>
+                        </div>
+                        <div class="service-toggle">
+                            <svg id="chevron-6" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div id="service-6" class="service-content">
+                        <ul>
+                            <li>Real-Time Business Dashboards: Automated reporting with natural language queries</li>
+                            <li>Data Cleansing & Enrichment: AI improves CRM/ERP data accuracy</li>
+                            <li>Predictive Modeling: Forecast demand, sales, and operational bottlenecks</li>
+                            <li>Automated Compliance Monitoring: AI scans and flags non-compliance in data handling</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-cta">
+                <button onclick="scrollToSection('contact')" class="btn-primary">
+                    Let's talk
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12,5 19,12 12,19"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-bg">
+            <div class="stats-orb stats-orb-1"></div>
+            <div class="stats-orb stats-orb-2"></div>
+        </div>
+        
+        <div class="container">
+            <div class="section-header">
+                <h2 class="glass-card">
+                    The best <span class="text-blue">otomation ROIs</span><br>
+                    are working in sync. Like owl's eyes.
+                    <img src="https://customer-assets.emergentagent.com/job_automate-business/artifacts/zuonih79_logo_mini.png" alt="owl eyes" class="owl-logo" />
+                </h2>
+                <p class="stats-subtitle">
+                    We sell the ROI of our <span class="text-blue">otomation</span>
+                </p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card glass-card">
+                    <div class="stat-number">88</div>
+                    <div class="stat-divider"></div>
+                    <h3 class="stat-label">opportunities</h3>
+                    <p class="stat-description">high-impact solutions mapped for businesses</p>
+                </div>
+
+                <div class="stat-card glass-card">
+                    <div class="stat-number">+$270k</div>
+                    <div class="stat-divider"></div>
+                    <h3 class="stat-label">saved</h3>
+                    <p class="stat-description">through our otomation implementations</p>
+                </div>
+
+                <div class="stat-card glass-card">
+                    <div class="stat-number">21</div>
+                    <div class="stat-divider"></div>
+                    <h3 class="stat-label">solutions delivered</h3>
+                    <p class="stat-description">for systems that move the needle</p>
+                </div>
+
+                <div class="stat-card glass-card">
+                    <div class="stat-number">99%</div>
+                    <div class="stat-divider"></div>
+                    <h3 class="stat-label">client satisfaction rate</h3>
+                    <p class="stat-description">businesses successfully improved</p>
+                </div>
+            </div>
+
+            <div class="section-cta">
+                <button onclick="scrollToSection('contact')" class="btn-primary">Let's talk</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Customers who trusted otobrothers</h2>
+                <h2 class="testimonials-subtitle">Trusted by Industry Leaders</h2>
+                <p>Don't just take our word for it. Here's what businesses leaders like you say about their transformation work with otobrothers.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-content">
+                        <p>"otobrothers transformed our entire workflow. What used to take our team 40 hours per week now runs automatically. The ROI was evident within the first month."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Sarah Johnson</strong>
+                        <span>CEO, TechFlow Solutions</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-content">
+                        <p>"The process automation they implemented saved us over $200K annually. Their team understood our complex requirements and delivered beyond expectations."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Michael Chen</strong>
+                        <span>Operations Director, Global Logistics Inc</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-content">
+                        <p>"Our lead generation increased by 300% after implementing their AI-powered marketing automation. The personalized outreach system is incredible."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Emily Rodriguez</strong>
+                        <span>Marketing Manager, Digital Dynamics</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clients-logos">
+                <h3>Trusted by</h3>
+                <div class="clients-grid">
+                    <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" class="client-logo">
+                    <img src="https://logo.clearbit.com/shopify.com" alt="Shopify" class="client-logo">
+                    <img src="https://logo.clearbit.com/slack.com" alt="Slack" class="client-logo">
+                    <img src="https://logo.clearbit.com/zoom.us" alt="Zoom" class="client-logo">
+                    <img src="https://logo.clearbit.com/hubspot.com" alt="HubSpot" class="client-logo">
+                    <img src="https://logo.clearbit.com/salesforce.com" alt="Salesforce" class="client-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="glass-card"><span class="text-blue">Let's talk</span></h2>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form glass-card">
+                    <form class="form">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="Enter your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Business Email</label>
+                            <input type="email" placeholder="Enter your business email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Company Name</label>
+                            <input type="text" placeholder="Enter your company name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" placeholder="Enter your phone number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Tell us about your automation needs</label>
+                            <textarea rows="4" placeholder="Describe your current processes and automation goals"></textarea>
+                        </div>
+                        
+                        <a href="mailto:support@otobrothers.com?subject=Business Automation Inquiry&body=Hello,%0D%0A%0D%0AI am interested in learning more about your automation solutions.%0D%0A%0D%0AName: %0D%0ACompany: %0D%0APhone: %0D%0A%0D%0APlease contact me to discuss our automation needs.%0D%0A%0D%0AThank you!" class="btn-primary btn-full">
+                            Send Inquiry
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m22 2-7 20-4-9-9-4z"></path>
+                                <path d="M22 2 11 13"></path>
+                            </svg>
+                        </a>
+                    </form>
+                </div>
+
+                <!-- Office Info -->
+                <div class="offices-info">
+                    <div class="office-card office-bucharest">
+                        <div class="office-header">
+                            <h4>Bucharest Office</h4>
+                        </div>
+                        <div class="office-details">
+                            <div class="office-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Strada Buzesti 75-77, Bucharest</span>
+                            </div>
+                            <div class="office-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>+40 21 123 4567</span>
+                            </div>
+                            <div class="office-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <span>support@otobrothers.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="office-card office-london">
+                        <div class="office-header">
+                            <h4>London Office</h4>
+                        </div>
+                        <div class="office-details">
+                            <div class="office-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>20 Eastbourne Terrace, London</span>
+                            </div>
+                            <div class="office-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>+44 20 7123 4567</span>
+                            </div>
+                            <div class="office-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2 2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <span>support@otobrothers.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Choose Us -->
+            <div id="about" class="why-choose glass-card">
+                <h3>Why choose otobrothers?</h3>
+                <div class="why-choose-grid">
+                    <div class="why-choose-item">
+                        <div class="why-choose-bullet"></div>
+                        <p>Straight talkers because business talk is serious but it shouldn't be boring.</p>
+                    </div>
+                    <div class="why-choose-item">
+                        <div class="why-choose-bullet"></div>
+                        <p>We leave customers' teams fully trained and with tools to experiment their own <span class="text-blue">otomation</span>.</p>
+                    </div>
+                    <div class="why-choose-item">
+                        <div class="why-choose-bullet"></div>
+                        <p>+50 years experience combined in Sales, Marketing, Advertising and Strategy; with Capital letters because we know what are we talking about.</p>
+                    </div>
+                    <div class="why-choose-item">
+                        <div class="why-choose-bullet"></div>
+                        <p>Proven track record with 21 successful implementations to date, with +$250k business revenue via <span class="text-blue">otomation</span> efficiencies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="https://customer-assets.emergentagent.com/job_523ddc15-12aa-4a04-8ea3-751c2ec002de/artifacts/a6i6e90a_logo.png" alt="otobrothers logo" class="logo">
+                    </div>
+                    <p class="footer-description">
+                        We are sharp, good and determined.<br>
+                        We see efficiencies in the Dark Forest of Complicated Business Processes.<br>
+                        The Owls of the business world.
+                    </p>
+                    
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <a href="mailto:support@otobrothers.com">support@otobrothers.com</a>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <a href="mailto:support@otobrothers.com">support@otobrothers.com</a>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://linkedin.com/company/otobrothers" target="_blank" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect width="4" height="12" x="2" y="9"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@otobrothers_ai" target="_blank" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                                <polygon points="9.75,15.02 15.5,11.75 9.75,8.48"></polygon>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>© 2025 otobrothers. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://customer-assets.emergentagent.com/job_owl-automation/artifacts/a1dpnihl_oTo_T%26Cs.pdf" target="_blank">Terms & Conditions</a>
+                    <a href="https://customer-assets.emergentagent.com/job_owl-automation/artifacts/0b0c685j_oTo_PrivacyPolicy.pdf" target="_blank">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
